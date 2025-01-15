@@ -51,4 +51,4 @@ Users should be able to:
 
 - Website - [JunLovin](https://junlovin.github.io/Mathias)
 - Frontend Mentor - [@JunLovin](https://www.frontendmentor.io/profile/JunLovin)
-- Twitter - [@junlovin23](https://www.twitter.com/junlovin23)"# mortgage-repayment-calculator" 
+- Twitter - [@junlovin23](https://www.twitter.com/junlovin23)"
