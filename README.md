@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Link
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://mortgage-repayment-calculator-theta-six.vercel.app/)
 
 ### Built with
 
