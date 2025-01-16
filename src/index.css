@@ -11,6 +11,13 @@
   --slate-900: hsl(202, 55%, 16%);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Plus Jakarta Sans', serif;
+  background-color: var(--slate-100)
 }
