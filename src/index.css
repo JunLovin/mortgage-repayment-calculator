@@ -1,13 +1,16 @@
 :root {
   /* Primary Colors */
   --lime: hsl(61, 70%, 52%);
+  --dark-lime: hsl(61, 64%, 46%);
+  --lime-opacity: hsla(61, 70%, 52%, .5);
   --red: hsl(4, 69%, 50%);
   /* Neutral Colors */
-  --white: hsl(0, 0%, 100%;);
+  --white: hsl(0, 0%, 100%);
+  --slate-100-opacity: hsla(202, 86%, 94%, .5);
   --slate-100: hsl(202, 86%, 94%);
   --slate-300: hsl(203, 41%, 72%);
   --slate-500: hsl(200, 26%, 54%);
-  --slate-700: hsl(200, 24%, 40%);
+  --slate-700: hsl(199, 28%, 22%);
   --slate-900: hsl(202, 55%, 16%);
 }
 
@@ -19,5 +22,9 @@
 
 body {
   font-family: 'Plus Jakarta Sans', serif;
-  background-color: var(--slate-100)
+  background-color: var(--slate-100);
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
