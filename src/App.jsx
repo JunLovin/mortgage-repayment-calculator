@@ -8,8 +8,8 @@ function App() {
       <article className="calculator">
         <h1>Mortgage Calculator</h1>
         <span className="clearAll">Clear All</span>
-        <label htmlFor='amount' className="label">Moprtgage Amount</label>
-        <input id='amount' name='amount' type='text'></input>
+        <label htmlFor='amount' className="label">Mortgage Amount</label>
+        <input id='amount' name='amount' type='text' className="amount"></input>
         <div className='two-inputs'>
         <div className="first-input">
           <label htmlFor="term" className="label">Mortgage Term</label>
