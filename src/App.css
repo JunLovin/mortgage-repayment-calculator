@@ -9,7 +9,7 @@ section {
     display: flex;
     flex-direction: row;
     width: 50rem;
-    height: 30rem;
+    height: 32rem;
     background-color: var(--white);
     border-top-left-radius: 1.2rem;
     border-bottom-left-radius: 1.2rem;
@@ -30,16 +30,17 @@ label {
     margin-bottom: 1.2rem;
 }
 
+.amount {
+    height: 2.8rem !important;
+}
+
 .calculator span {
     position: relative;
     bottom: 2.2rem;
     left: 18.5rem;
-    font-size: .7rem;
+    font-size: .8rem;
     cursor: pointer;
-    color: var(--slate-300);
-}
-
-.calculator span:hover {
+    color: var(--slate-500);
     text-decoration: underline;
 }
 
@@ -48,7 +49,7 @@ label {
     justify-content: center;
     align-items: center;
     width: 65%;
-    height: 2.5rem;
+    height: 3rem;
     background-color: var(--lime);
     border: none;
     cursor: pointer;
