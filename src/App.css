@@ -1,6 +1,5 @@
 main {
     width: 100%;
-    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,14 +10,20 @@ section {
     flex-direction: row;
     width: 50rem;
     height: 30rem;
+    background-color: var(--white);
+    border-top-left-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+}
+
+label {
+    font-weight: 500;
 }
 
 .calculator {
     display: flex;
     flex-direction: column;
     width: 50%;
-    background-color: var(--white);
-    padding: 1rem;
+    padding: 1.8rem;
 }
 
 .calculator h1 {
@@ -28,7 +33,7 @@ section {
 .calculator span {
     position: relative;
     bottom: 2.2rem;
-    left: 20rem;
+    left: 18.5rem;
     font-size: .7rem;
     cursor: pointer;
     color: var(--slate-300);
@@ -39,44 +44,151 @@ section {
 }
 
 .calculator button {
-    width: 80%;
-    margin: 0 auto;
-    align-self: center;
-    align-content: center;
-    align-items: center;
-    justify-self: center;
+    display: flex;
     justify-content: center;
-    justify-items: center;
+    align-items: center;
+    width: 65%;
+    height: 2.5rem;
+    background-color: var(--lime);
+    border: none;
+    cursor: pointer;
+    border-radius: 15rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.calculator button:active {
+    background-color: var(--dark-lime);
+}
+
+.calculator button img {
+    margin-right: .3rem;
 }
 
 .two-inputs {
     display: flex;
     flex-direction: row;
+    margin: 1.5rem 0;
 }
+
+.first-input {
+    margin-right: .5rem;
+}
+
+.first-input input, .second-input input {
+    width: 10rem;
+}
+
+/* Results Section */
 
 .results {
     width: 50%;
-    background-color: var(--slate-900);
+    background-color: var(--slate-700);
     border-bottom-left-radius: 5rem;
+    border-top-right-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .results h2 {
     align-self: start;
-    color: var(--lime);
+    color: var(--white);
     font-size: 1.1rem;
     margin-bottom: .8rem;
+    margin-top: .5rem;
 }
 
 .results .results-description {
-    font-size: .9rem;
-    color: var(--slate-100);
+    font-size: .8rem;
+    color: var(--slate-100-opacity);
+    font-weight: 500;
+    margin-bottom: 2rem;
+    line-height: 1.5;
 }
 
 .monthlyRepayment {
     background-color: var(--slate-900);
-    border-top: 1px solid var(--lime);
+    border-top: 2px solid var(--lime);
+    border-radius: .3rem;
+    width: 90%;
+    height: 13rem;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.monthlyRepayment-text {
+    color: var(--slate-100-opacity);
+    font-weight: 500;
+    font-size: .9rem;
+    margin-bottom: .4rem;
+}
+
+hr {
+    margin: 1rem 0;
+    background-color: #aaa9;
+    border: none;
+    height: 1px;
+}
+
+.value {
+    color: var(--lime);
+    font-weight: 700;
+    font-size: 2.3rem;
+}
+
+.second-value {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+[type="text"] {
+    border-radius: .2rem;
+    height: 2.5rem;
+    margin-top: .5rem;
+    border: .5px solid #aaa;
+    padding: 0 1rem;
+    font-size: 1rem;
+}
+
+.radio-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.first-radio-btn, .second-radio-btn {
+    border: 1px solid #aaa;
+    margin: .2rem 0;
+    height: 2.5rem;
+    align-content: center;
+    padding: 0 .5rem;
+    cursor: pointer;
+}
+
+.first-radio-btn label, .second-radio-btn label {
+    cursor: pointer;
+}
+
+.first-radio-btn input, .second-radio-btn input {
+    margin-right: .8rem;
+    margin-left: .5rem;
+    border: none;
+}
+
+.first-radio-btn input:checked, .second-radio-btn input:checked {
+    background-color: var(--lime);
+}
+
+.first-radio-btn:checked, .second-radio-btn:focus {
+    background-color: var(--lime-opacity)
+}
+
+.label {
+    margin-bottom: .5rem;
 }
