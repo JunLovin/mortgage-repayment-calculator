@@ -48,7 +48,7 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 65%;
+    width: 75%;
     height: 3rem;
     background-color: var(--lime);
     border: none;
@@ -56,6 +56,7 @@ label {
     border-radius: 15rem;
     font-weight: 600;
     margin-top: 1rem;
+    font-size: 1rem;
 }
 
 .calculator button:active {
