@@ -2,7 +2,7 @@ import './App.css'
 import calculatorBtn from './assets/images/icon-calculator.svg'
 
 function App() {
-  let monthlyRepaymentValue = 1 + ',' + 797.74
+  // let monthlyRepaymentValue = document.getElementById('monthlyRepaymentValue');
   let totalRepayValue = 0
 
   function changeFirstDivBackground() {
@@ -79,7 +79,7 @@ function App() {
         <p className="results-description">Your results are shown below based on the information you provided. To adjust the results, edit the form and click {"'calculate repayments'"} again</p>
         <div className='monthlyRepayment'>
           <p className="monthlyRepayment-text">Your monthly repayments</p>
-          <p className="value">${monthlyRepaymentValue}</p>
+          <p className="value" id='monthlyRepaymentValue'></p>
           <hr/>
           <p className="monthlyRepayment-text">Total you will repay over the term</p>
           <p className="second-value">${totalRepayValue}</p>
