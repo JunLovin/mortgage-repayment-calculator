@@ -2,6 +2,8 @@ import './App.css'
 import calculatorBtn from './assets/images/icon-calculator.svg'
 
 function App() {
+  let monthlyRepaymentValue = 0
+  const span = <span>${monthlyRepaymentValue}</span>
   // let monthlyRepaymentValue = document.getElementById('monthlyRepaymentValue');
   let totalRepayValue = 0
 
@@ -31,6 +33,7 @@ function App() {
           const interestInput = document.getElementById('interest-rate');
           const repaymentRadio = document.getElementById('repayment');
           const interestRadio = document.getElementById('interest');
+          monthlyRepaymentValue = 0
           amountInput.value = ''
           termtInput.value = ''
           interestInput.value =''
@@ -79,7 +82,7 @@ function App() {
         <p className="results-description">Your results are shown below based on the information you provided. To adjust the results, edit the form and click {"'calculate repayments'"} again</p>
         <div className='monthlyRepayment'>
           <p className="monthlyRepayment-text">Your monthly repayments</p>
-          <p className="value" id='monthlyRepaymentValue'></p>
+          <p className="value" id='monthlyRepaymentValue'>{span}</p>
           <hr/>
           <p className="monthlyRepayment-text">Total you will repay over the term</p>
           <p className="second-value">${totalRepayValue}</p>
