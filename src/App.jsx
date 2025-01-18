@@ -12,14 +12,9 @@ function App() {
   }
 
   function changeSecondDivBackground() {
-    const secondInput = document.querySelector('.second-radio-btn')
+    const secondInput = document.querySelector('.second-radio-btn')  
     secondInput.style.backgroundColor = 'var(--lime-semi-transparent)';
     secondInput.style.border = '1px solid var(--lime)';
-  }
-
-  const  onClickResetToDefaults = () => {
-    monthlyRepaymentValue = `${1},${1283.21}`
-    document.body.backgroundColor = 'var(--slate-900)';
   }
 
   return (
@@ -27,7 +22,27 @@ function App() {
     <section className="container">
       <article className="calculator">
         <h1>Mortgage Calculator</h1>
-        <span className="clearAll">Clear All</span>
+        <span className="clearAll" 
+        onClick={() => {
+          const firstInput = document.querySelector('.first-radio-btn')
+          const secondInput = document.querySelector('.second-radio-btn')  
+          const amountInput = document.getElementById('amount');
+          const termtInput = document.getElementById('term');
+          const interestInput = document.getElementById('interest-rate');
+          const repaymentRadio = document.getElementById('repayment');
+          const interestRadio = document.getElementById('interest');
+          amountInput.value = ''
+          termtInput.value = ''
+          interestInput.value =''
+          repaymentRadio.checked = false
+          interestRadio.checked = false
+          if (!repaymentRadio.checked && !interestRadio.checked) {
+            firstInput.style.backgroundColor = ''
+            firstInput.style.border = ''
+            secondInput.style.backgroundColor = ''
+            secondInput.style.border = ''
+          }
+        }}>Clear All</span>
         <div className="mortgageAmount">
         <label htmlFor='amount' className="label">Mortgage Amount</label>
         <span className="dollarSign">$</span>
@@ -54,7 +69,10 @@ function App() {
           <input  onClick={changeSecondDivBackground} type='radio' value="Interest Only" name="interest" id="interest"/><label htmlFor="interest" className='radio'>Interest Only</label>
           </div>
         </div>
-        <button onClick={onClickResetToDefaults}><img src={calculatorBtn}/>Calculate Repayments</button>
+        <button onClick={() => {
+          const inputs = document.querySelector('input').value
+          return console.log(inputs)
+        }}><img src={calculatorBtn}/>Calculate Repayments</button>
       </article>
       <article className='results'>
         <h2>Your results</h2>
