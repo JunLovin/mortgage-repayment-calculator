@@ -17,34 +17,44 @@ function App() {
     secondInput.style.border = '1px solid var(--lime)';
   }
 
+  const  onClickResetToDefaults = () => {
+    monthlyRepaymentValue = `${1},${1283.21}`
+    document.body.backgroundColor = 'var(--slate-900)';
+  }
+
   return (
     <>
     <section className="container">
       <article className="calculator">
         <h1>Mortgage Calculator</h1>
         <span className="clearAll">Clear All</span>
+        <div className="mortgageAmount">
         <label htmlFor='amount' className="label">Mortgage Amount</label>
+        <span className="dollarSign">$</span>
         <input id='amount' name='amount' type='text' className="amount"></input>
+        </div>
         <div className='two-inputs'>
         <div className="first-input">
           <label htmlFor="term" className="label">Mortgage Term</label>
           <input type='text' id="term" name="term"></input>
+          <span className="years">years</span>
         </div>
         <div className="second-input">
           <label htmlFor="interest-rate" className="label">Interest Rate</label>
           <input type='text' id="interest-rate" name="interest-rate"></input>
+          <span className="percent">%</span>
         </div>
         </div>
         <label className="label">Mortgage Type</label>
         <div className="radio-btn">
           <div className="first-radio-btn two-radio-btn">
-          <input  onClick={changeFirstDivBackground} type="radio" value="Repayment" id="repayment" name="repayment"/><label htmlFor="repayment">Repayment</label>
+          <input  onClick={changeFirstDivBackground} type="radio" value="Repayment" id="repayment" name="repayment" className='radio'/><label htmlFor="repayment">Repayment</label>
           </div>
           <div className="second-radio-btn two-radio-btn">
-          <input  onClick={changeSecondDivBackground} type='radio' value="Interest Only" name="interest" id="interest"/><label htmlFor="interest">Interest Only</label>
+          <input  onClick={changeSecondDivBackground} type='radio' value="Interest Only" name="interest" id="interest"/><label htmlFor="interest" className='radio'>Interest Only</label>
           </div>
         </div>
-        <button><img src={calculatorBtn}/>Calculate Repayments</button>
+        <button onClick={onClickResetToDefaults}><img src={calculatorBtn}/>Calculate Repayments</button>
       </article>
       <article className='results'>
         <h2>Your results</h2>
