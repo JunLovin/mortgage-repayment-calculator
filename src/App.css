@@ -56,7 +56,7 @@ label {
     left: -8.65rem !important;
     padding: .82rem 1rem;
     align-content: center;
-    background-color: var(--slate-100-opacity);
+    background-color: var(--slate-100);
     text-align: center;
     cursor: auto !important;
 }
@@ -66,7 +66,7 @@ label {
     left: 6.38rem !important;
     top: -2rem;
     padding: .70rem;
-    background-color: var(--slate-100-opacity);
+    background-color: var(--slate-100);
     text-decoration: none !important;
     color: var(--slate-700);
     font-weight: 900;
@@ -76,7 +76,7 @@ label {
 .percent {
     left: 7.77rem !important;
     top: -2rem;
-    background-color: var(--slate-100-opacity);
+    background-color: var(--slate-100);
     padding: .70rem;
     cursor: auto !important;
     text-decoration: none !important;
@@ -206,6 +206,10 @@ hr {
     border: .5px solid #aaa;
     padding: 0 1rem;
     font-size: 1rem;
+}
+
+#amount {
+    padding-left: 3rem !important;
 }
 
 .radio-btn {
