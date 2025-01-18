@@ -2,6 +2,21 @@ import './App.css'
 import calculatorBtn from './assets/images/icon-calculator.svg'
 
 function App() {
+  let monthlyRepaymentValue = 1 + ',' + 797.74
+  let totalRepayValue = 0
+
+  function changeFirstDivBackground() {
+    const firstInput = document.querySelector('.first-radio-btn')
+    firstInput.style.backgroundColor = 'var(--lime-semi-transparent)';
+    firstInput.style.border = '1px solid var(--lime)';
+  }
+
+  function changeSecondDivBackground() {
+    const secondInput = document.querySelector('.second-radio-btn')
+    secondInput.style.backgroundColor = 'var(--lime-semi-transparent)';
+    secondInput.style.border = '1px solid var(--lime)';
+  }
+
   return (
     <>
     <section className="container">
@@ -22,11 +37,11 @@ function App() {
         </div>
         <label className="label">Mortgage Type</label>
         <div className="radio-btn">
-          <div className="first-radio-btn">
-          <input type="radio" value="Repayment" id="repayment" name="repayment"/><label htmlFor="repayment">Repayment</label>
+          <div className="first-radio-btn two-radio-btn">
+          <input  onClick={changeFirstDivBackground} type="radio" value="Repayment" id="repayment" name="repayment"/><label htmlFor="repayment">Repayment</label>
           </div>
-          <div className="second-radio-btn">
-          <input type='radio' value="Interest Only" name="interest" id="interest"/><label htmlFor="interest">Interest Only</label>
+          <div className="second-radio-btn two-radio-btn">
+          <input  onClick={changeSecondDivBackground} type='radio' value="Interest Only" name="interest" id="interest"/><label htmlFor="interest">Interest Only</label>
           </div>
         </div>
         <button><img src={calculatorBtn}/>Calculate Repayments</button>
@@ -36,10 +51,10 @@ function App() {
         <p className="results-description">Your results are shown below based on the information you provided. To adjust the results, edit the form and click {"'calculate repayments'"} again</p>
         <div className='monthlyRepayment'>
           <p className="monthlyRepayment-text">Your monthly repayments</p>
-          <p className="value">$1,797.74</p>
+          <p className="value">${monthlyRepaymentValue}</p>
           <hr/>
           <p className="monthlyRepayment-text">Total you will repay over the term</p>
-          <p className="second-value">$539,322.94</p>
+          <p className="second-value">${totalRepayValue}</p>
         </div>
       </article>
     </section>
