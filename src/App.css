@@ -44,6 +44,44 @@ label {
     text-decoration: underline;
 }
 
+.mortgageAmount input {
+    width: 100%;
+}
+
+.dollarSign {
+    position: relative;
+    color: var(--slate-700);
+    font-weight: 900;
+    top: 2.475rem;
+    left: -8.65rem !important;
+    padding: .82rem 1rem;
+    align-content: center;
+    background-color: var(--slate-100-opacity);
+    text-align: center;
+    cursor: auto !important;
+}
+
+.years {
+    position: relative;
+    left: 6.38rem !important;
+    top: -2rem;
+    padding: .70rem;
+    background-color: var(--slate-100-opacity);
+    text-decoration: none !important;
+    color: var(--slate-700);
+    font-weight: 900;
+    cursor: auto !important;
+}
+
+.percent {
+    left: 7.77rem !important;
+    top: -2rem;
+    background-color: var(--slate-100-opacity);
+    padding: .70rem;
+    cursor: auto !important;
+    text-decoration: none !important;
+}
+
 .calculator button {
     display: flex;
     justify-content: center;
@@ -70,7 +108,18 @@ label {
 .two-inputs {
     display: flex;
     flex-direction: row;
-    margin: 1.5rem 0;
+    margin: 1.2rem 0;
+}
+
+.two-radio-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #aaa9;
+}
+
+.two-radio-btn label {
+    font-size: .9rem;
 }
 
 .first-input {
