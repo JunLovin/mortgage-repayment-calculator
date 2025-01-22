@@ -49,17 +49,17 @@ function App() {
         <div className="mortgageAmount">
         <label htmlFor='amount' className="label">Mortgage Amount</label>
         <span className="dollarSign">$</span>
-        <input id='amount' name='amount' type='text' className="amount"></input>
+        <input id='amount' name='amount' type='number' className="amount"></input>
         </div>
         <div className='two-inputs'>
         <div className="first-input">
           <label htmlFor="term" className="label">Mortgage Term</label>
-          <input type='text' id="term" name="term"></input>
+          <input type='number' id="term" name="term"></input>
           <span className="years">years</span>
         </div>
         <div className="second-input">
           <label htmlFor="interest-rate" className="label">Interest Rate</label>
-          <input type='text' id="interest-rate" name="interest-rate"></input>
+          <input type='number' id="interest-rate" name="interest-rate"></input>
           <span className="percent">%</span>
         </div>
         </div>
