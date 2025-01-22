@@ -60,6 +60,7 @@ label {
     background-color: var(--slate-100);
     text-align: center;
     cursor: auto !important;
+    text-decoration: none !important;
 }
 
 .years {
@@ -200,13 +201,19 @@ hr {
     margin-top: .2rem;
 }
 
-[type="text"] {
+[type="text"], [type="number"] {
     border-radius: .2rem;
     height: 2.5rem;
     margin-top: .5rem;
     border: .5px solid #aaa;
     padding: 0 1rem;
     font-size: 1rem;
+    appearance: textfield;
+}
+
+[type="number"]::-webkit-outer-spin-button, [type="number"]::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
 }
 
 #amount {
